@@ -1,28 +1,28 @@
-// // Destructuring - Faster/Easier way to access/unpack variables from arrays, objects.
+// Destructuring - Faster/Easier way to access/unpack variables from arrays, objects.
 
-// // Array  Destructuring.
-// const fruits = ['orange', 'banana', 'lemon'];
-// const friends = ['john', 'peter', 'bob', 'anna', 'kelly'];
+// Array  Destructuring.
+const fruits = ['orange', 'banana', 'lemon'];
+const friends = ['john', 'peter', 'bob', 'anna', 'kelly'];
 
-// // Traditional way.
-// const fruit1 = fruits[0];
-// const fruit2 = fruits[1];
-// const fruit3 = fruits[2];
+// Traditional way.
+const fruit1 = fruits[0];
+const fruit2 = fruits[1];
+const fruit3 = fruits[2];
 
-// console.log(fruit1, fruit2, fruit3);
+console.log(fruit1, fruit2, fruit3);
 
-// // Array Destructuring Analysis. Use [].
-// const [john, peter, bob, anna, kelly, susane] = friends;
-// console.log(john, peter, bob, anna, kelly, susane); // Susane will be undefined.
-// // Accessing some values & leaving some values.
-// const [orange, , kemon] = fruits;
-// console.log(orange, kemon); // We can use any name just like I used kemon for lemon.
+// Array Destructuring Analysis. Use [].
+const [john, peter, bobs, anna, kelly, susane] = friends;
+console.log(john, peter, bobs, anna, kelly, susane); // Susane will be undefined.
+// Accessing some values & leaving some values.
+const [orange, , kemon] = fruits;
+console.log(orange, kemon); // We can use any name just like I used kemon for lemon.
 
-// // Swapping by using Destructuring Method.
-// let first = 'john';
-// let second = 'bob';
-// [second, first] = [first, second];
-// console.log(first, second); 
+// Swapping by using Destructuring Method.
+let firsts = 'john';
+let second = 'bob';
+[second, firsts] = [firsts, second];
+console.log(firsts, second); 
 
 // Object Destructuring.
 const bob = {

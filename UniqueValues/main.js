@@ -32,5 +32,8 @@ const menu = [
 const categories = ['all',...new Set(menu.map((item) => item.category))];
 console.log(categories);
 
+const names = ['all',...new Set(menu.map((item) => item.name))];
+console.log(names);
+
 const result = document.getElementById('result');
 result.innerHTML = categories.map((category) => `<button>${category}</button>`).join(' ');

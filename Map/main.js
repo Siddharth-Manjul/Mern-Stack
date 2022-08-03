@@ -46,4 +46,4 @@ console.log(newPeople);
 // Wrapping data in HTML.
 const names = people.map((person) => `<h2>${person.name}</h2>`);
 const result = document.getElementById('result');
-result.innerHTML = names.join('');
+result.innerHTML = names.join('Hola');

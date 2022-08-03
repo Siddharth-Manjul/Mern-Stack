@@ -4,6 +4,37 @@ reduces to a single value - number, array , object.
 1st parameter ('acc') - total of all calculations. 'acc' stands for "accumulator".
 2nd parameter ('curr') - current iteration/value. */
 
+// Web Dev Simplified Example.
+const items = [
+  {name: 'Rice', price: 5},
+  {name: 'Book', price: 20},
+  {name: 'Chicken', price: 10},
+  {name: 'Monitor', price: 100},
+]
+
+const totalPrice = items.reduce((total, item) => {
+  return total + item.price
+}, 0)
+
+console.log(totalPrice);
+
+// Grouping the people by age.
+const people = [
+  {name: 'Kyle', age: 26},
+  {name: 'John', age: 31},
+  {name: 'Sally', age: 42},
+  {name: 'Jill', age: 42},
+]
+
+const result = people.reduce((groupedPeople, person) => {
+  const age = person.age
+  if(groupedPeople[age] == null) groupedPeople[age] = []
+  groupedPeople[age].push(person)
+  return groupedPeople
+}, {})
+
+console.log(result);
+
 const staff = [
   {
     name: "bob",

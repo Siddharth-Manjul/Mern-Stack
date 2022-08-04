@@ -44,7 +44,7 @@ console.log(firstName, lastName, sister);
 // Object Destructuring Analysis. Use {}.
 const last = 'some value';
 const {first, last:shakeAndBake, city, zip, siblings:{sister:favouriteSibling}} = bob;
-console.log(first, city, zip, shakeAndBake, favouriteSibling);
+console.log(first, city, zip, shakeAndBake, favouriteSibling); // To capitalize the first - first.charAt().toUpperCase() + first.substring(1)
 
 function printPerson({first, last, city, siblings:{sister}}) {
   // First Method.

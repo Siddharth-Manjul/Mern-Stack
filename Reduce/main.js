@@ -35,6 +35,7 @@ const result = people.reduce((groupedPeople, person) => {
 
 console.log(result);
 
+// Coding Addict Example.
 const staff = [
   {
     name: "bob",

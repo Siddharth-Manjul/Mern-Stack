@@ -31,11 +31,17 @@ const articles = [
 // Using Async/Await.
 const getData = async () => {
   try {
-    const user = await getUser("johns");
-    if (user) {
-      const articles = await getArticles(user.Id);
-      console.log(articles);
-    }
+    // Preferred way.
+    const user = await getUser("susan");
+    const articles = await getArticles(user.Id);
+    console.log(articles);
+
+    // Normal way.
+    // const user = await getUser("johns");
+    // if (user) {
+    //   const articles = await getArticles(user.Id);
+    //   console.log(articles);
+    // }
   } catch (error) {
     console.log(error);
   }

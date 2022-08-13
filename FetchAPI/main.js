@@ -2,10 +2,6 @@
 // Default - Get Requests, supports other methods as well.
 // Returns Promise.
 
-// Fetch Errors.
-// Only throsw an error if cannot resolve.
-// Error response still a response (400 - 500).
-
 const url = "https://www.course-api.com/react-tours-project";
 
 // console.log(fetch(url));
@@ -27,5 +23,4 @@ const getTours = async () => {
   }
 }
 
-const btn = document.querySelector('.btn');
-btn.addEventListener('click', getTours);
+getTours();

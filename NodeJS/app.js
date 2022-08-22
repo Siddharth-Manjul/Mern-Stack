@@ -3,9 +3,11 @@
 
 const names = require('./names');
 const sayHi = require('./utils');
+const data = require('./moduleAccess');
 
-sayHi('susan'); 
-sayHi(names.john);
-sayHi(names.peter);
+require('./mindGrenade.js')
+// sayHi('susan'); 
+// sayHi(names.john);
+// sayHi(names.peter);
 
 

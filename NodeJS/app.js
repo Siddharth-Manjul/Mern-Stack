@@ -13,8 +13,14 @@
 // npm init (step by step, press emter to skip).
 // npm init -y (everything default).
 
+// RUN "npm install" WHENEVER USING THE SHARED CODE ON OTHER SYSTEM OTHERWISE THE PACKAGES WON'T WORK.
+
+// Dev dependency command - npm i <packageName> --save-dev (or -D).
+// Prefer to use nodemon as dev dependency.
+
 const _ = require("lodash");
 
 const items = [1, [2, 3, [4]]];
 const newItems = _.flattenDeep(items);
 console.log(newItems);
+console.log("Hello World");

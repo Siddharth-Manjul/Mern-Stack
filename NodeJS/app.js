@@ -1,10 +1,29 @@
-const http = require('http');
+const { readFile } = require("fs");
 
-const server = http.createServer((req, res) => {
-  console.log('request event');
-  res.end('Hello World!');
-})
+const getText = (path) => {
+  return new Promise((resolve, reject) => {
+    readFile(path, "utf8", (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+};
 
-server.listen(5000, () => {
-  console.log("Server listening on port : 5000.......");
-})
+const start = async () => {
+  try {
+    const first = await getText('./Content/first.txt');
+    const second = await getText('./Content/second.txt');
+    console.log(first, second);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+start()
+
+// getText("./Content/first.txt")
+//   .then((result) => console.log(result))
+//   .catch((err) => console.log(err));

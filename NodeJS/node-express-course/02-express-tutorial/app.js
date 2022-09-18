@@ -11,6 +11,7 @@ app.get("/", (req, res) => {
   res.send('<h1>Home Page</h1><a href="/api/products">Products</a>');
 });
 
+// Req Params.
 app.get("/api/products", (req, res) => {
   const newProduct = products.map((product) => {
     const { id, name, image } = product;
@@ -19,9 +20,11 @@ app.get("/api/products", (req, res) => {
   res.json(newProduct);
 });
 
+
+// Single Product search using ID (Params).
 app.get("/api/products/:productID", (req, res) => {
   // console.log(req);
-  // console.log(req.params);
+  console.log(req.params);
   const { productID } = req.params;
   const singleProduct = products.find(
     (product) => product.id === Number(productID)
@@ -31,6 +34,18 @@ app.get("/api/products/:productID", (req, res) => {
   }
   return res.json(singleProduct);
 });
+
+// Review (Params).
+app.get("/api/products/:productID/reviews/:reviewID", (req, res) => {
+  console.log(req.params);
+  res.send("Mast hai vro");
+});
+
+// Query String.
+app.get("/api/v1/query", (req, res) => {
+  console.log(req.query);
+  res.send("Hello World");
+})
 
 app.listen(5000, () => {
   console.log("Server is listening on port 5k...");
